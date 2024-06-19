@@ -7,9 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "build:ssr": "ng build && ng run emtech_prueba:server",
-    "serve:ssr": "node dist/server/main.js",
-    "prerender": "ng run emtech_prueba:prerender"
+    "serve:ssr:emtech_prueba_temp": "node dist/emtech_prueba_temp/server/server.mjs"
   },
   "private": true,
   "dependencies": {
