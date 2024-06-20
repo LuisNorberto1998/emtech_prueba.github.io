@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header/header.component';
 import { CollapseComponent } from './collapse/collapse.component';
+import { NgbCollapseModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 
@@ -11,7 +12,8 @@ import { CollapseComponent } from './collapse/collapse.component';
     CollapseComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    NgbCollapseModule
   ],
   exports: [
     HeaderComponent,

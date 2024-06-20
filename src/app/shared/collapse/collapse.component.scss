@@ -1,0 +1,88 @@
+@import 'src/styles';
+
+.collapse-container {
+    height: auto;
+
+    p {
+        margin-top: 0;
+        margin-bottom: 1rem;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+    }
+
+    .collapse-card {
+        background-color: transparent;
+        width: 90vw;
+        margin: 0 auto;
+        border: none;
+
+        .card {
+            background-color: transparent;
+            border: none;
+        }
+
+        .card-body {
+            color: $white-color;
+            text-align: left;
+            font-weight: 100;
+            padding: 25px 0;
+        }
+
+        .button-collapse {
+            background-color: $turquesa-emtech;
+            margin: 0 auto;
+            width: 40%;
+            text-align: center;
+            height: 50px;
+            display: flex;
+            padding: 0;
+            justify-content: center;
+        }
+    }
+
+    button {
+        color: $azul-marino-emtech;
+        background-color: $white-color;
+        width: 90vw;
+        margin: 0 auto;
+        border: none;
+        border-radius: 5px;
+        height: 65px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 15px;
+        position: relative;
+        cursor: pointer;
+
+        &:active {
+            background-color: $shadow-color;
+            color: $azul-marino-emtech;
+        }
+
+        &[aria-expanded="true"] {
+            background-color: $shadow-color;
+            color: $azul-marino-emtech;
+        }
+
+        .arrow {
+            width: auto;
+            height: 30px;
+            display: inline-block;
+            transition: transform 0.3s ease, color 0.3s ease;
+            background-repeat: no-repeat;
+            background-position: right 10px center;
+
+            &.collapsed {
+                transform: rotate(0deg);
+                color: $azul-marino-emtech;
+            }
+
+            &.expanded {
+                transform: rotate(90deg);
+                color: $azul-emtech;
+            }
+        }
+    }
+}

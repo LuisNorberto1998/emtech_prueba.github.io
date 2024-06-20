@@ -1,1 +1,28 @@
-<p>collapse works!</p>
+<div class="container-global collapse-container">
+    <p>
+        <button type="button" class="btn btn-outline-primary" (click)="toggleCollapse()"
+            [attr.aria-expanded]="!isCollapsed" aria-controls="collapseExample">
+            Toggle with Function
+
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                [ngClass]="{'expanded': !isCollapsed, 'collapsed': isCollapsed}" class="arrow">
+                <path d="M4 12H20M20 12L14 6M20 12L14 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+            </svg>
+
+
+
+        </button>
+    </p>
+
+    <div #collapse="ngbCollapse" [(ngbCollapse)]="isCollapsed" class="collapse-card">
+        <div class="card">
+            <div class="card-body">You can collapse this card by clicking the Toggle button</div>
+        </div>
+        <div>
+            <button class="button-collapse">
+                Find out how
+            </button>
+        </div>
+    </div>
+</div>

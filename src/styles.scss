@@ -26,7 +26,8 @@ body {
 
 body {
   margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-family: 'Proxima Nova Condensed', sans-serif;
+  font-family: 'Proxima Nova Extra Condensed', sans-serif;
 }
 
 
@@ -37,6 +38,8 @@ $turquesa-emtech: #25C7D9;
 $morado-emtech: #1165F6;
 $azul-ultramar-emtech: #1165F6;
 $azul-marino-emtech: #00215B;
+$white-color: #FFFFFF;
+$shadow-color: #E9E9E9;
 
 
 .sidebar-global {
@@ -44,6 +47,14 @@ $azul-marino-emtech: #00215B;
     width: 137px;
     height: 30px;
   }
+}
+
+.container-global {
+  padding: 0;
+  position: relative;
+  width: 100%;
+  padding: 0;
+  margin: 0;
 }
 
 // Definición de variable
