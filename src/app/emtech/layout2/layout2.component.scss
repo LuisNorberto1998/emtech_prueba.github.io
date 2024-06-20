@@ -1,0 +1,57 @@
+@import 'src/styles';
+
+.layout-two {
+    position: relative;
+    width: 100%;
+    height: 667px;
+    padding: 0;
+    margin: 0;
+}
+
+.container-two {
+    position: absolute;
+    background-color: $azul-emtech;
+    width: 100%;
+    height: 667px;
+    opacity: 0px;
+}
+
+.container-text-two {
+    position: absolute;
+    color: white;
+    text-align: center;
+    width: 100%;
+    height: 200px;
+
+    h1 {
+        font-family: 'Proxima Nova Condensed', sans-serif;
+        font-family: 'Proxima Nova Extra Condensed', sans-serif;
+        text-align: left;
+        top: 40px;
+        left: 45px;
+        position: absolute;
+        width: 80%;
+
+        font-size: 35px;
+        font-weight: 700;
+        line-height: 40px;
+        letter-spacing: -1px;
+        text-align: left;
+
+    }
+
+    h3 {
+        font-family: "Proxima Nova Condensed", sans-serif;
+        font-family: "Proxima Nova Extra Condensed", sans-serif;
+        font-size: calc(20px * 0.1);
+        font-weight: lighter;
+        line-height: 20px;
+        text-align: left;
+        top: 85px;
+        position: absolute;
+        left: 45px;
+        width: auto;
+        letter-spacing: 2px;
+        font-size: calc(13px + 0.5vw);
+    }
+}

@@ -1,1 +1,73 @@
-/* You can add global styles to this file, and also import other style files */
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+
+// Define the theme object.
+$emtech_prueba_temp-theme: mat.define-theme((color: (theme-type: light,
+        primary: mat.$azure-palette,
+        tertiary: mat.$blue-palette,
+      ),
+      density: (scale: 0,
+      )));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+:root {
+  @include mat.all-component-themes($emtech_prueba_temp-theme);
+}
+
+// Comment out the line below if you want to use the pre-defined typography utility classes.
+// For more information: https://material.angular.io/guide/typography#using-typography-styles-in-your-application.
+// @include mat.typography-hierarchy($emtech_prueba_temp-theme);
+
+// Comment out the line below if you want to use the deprecated `color` inputs.
+// @include mat.color-variants-backwards-compatibility($emtech_prueba_temp-theme);
+
+html,
+body {
+  height: 100%;
+  // overflow-y: scroll;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+
+// Styles
+
+$azul-emtech: #1165F6;
+$turquesa-emtech: #25C7D9;
+$morado-emtech: #1165F6;
+$azul-ultramar-emtech: #1165F6;
+$azul-marino-emtech: #00215B;
+
+
+.sidebar-global {
+  a>img {
+    width: 137px;
+    height: 30px;
+  }
+}
+
+// Definición de variable
+$prefix: 'myapp-'; // Ejemplo de prefijo
+$navbar-light-toggler-icon-bg: #fff; // Ejemplo de color de fondo
+
+// Uso de la variable
+.#{$prefix}navbar-toggler-icon {
+  background-color: $navbar-light-toggler-icon-bg; // Aplicando el color de fondo
+}
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';
