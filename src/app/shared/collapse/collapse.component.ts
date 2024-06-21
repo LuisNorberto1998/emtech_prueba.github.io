@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrl: './collapse.component.scss'
 })
 export class CollapseComponent {
-  isCollapsed = false;
+  isCollapsed: { [key: number]: boolean } = {};
 
   jsonDoIt = [
     { id: 0, title: "Digital talent review", description: "Ensuring your talent evolves simultaneously is critical in a rapidly changing technological landscape. With our Digital Talent Review, power your digital transformation by understanding your current digital skills, forecasting talent needs, and strategizing your talent roadmap.", titleButton: "Find out How", functionButton: () => {}},
@@ -16,7 +16,23 @@ export class CollapseComponent {
     { id: 4, title: "Talent ecosystems", description: "EmTech Institute works with governments, foundations, and universities to empower underserved populations with crucial technology skills, enabling them to access rewarding careers in the tech sector and contribute meaningfully to the competitiveness of their communities.", titleButton: "Find out How", functionButton: () => {}},
   ]
 
-  toggleCollapse(): void {
-    this.isCollapsed = !this.isCollapsed;
+  ngOnInit() {
+    // Inicializar todos los collapse como cerrados
+    this.jsonDoIt.forEach(item => {
+      this.isCollapsed[item.id] = true;
+    });
   }
+
+  toggleCollapse(id: number) {
+    // Cerrar todos los demás collapses
+    Object.keys(this.isCollapsed).forEach(key => {
+      if (parseInt(key) !== id) {
+        this.isCollapsed[parseInt(key)] = true;
+      }
+    });
+
+    // Toggle el estado del collapse actual
+    this.isCollapsed[id] = !this.isCollapsed[id];
+  }
+  
 }

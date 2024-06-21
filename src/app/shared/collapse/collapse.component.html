@@ -1,28 +1,26 @@
 <div class="container-global collapse-container">
-    <p>
-        <button type="button" class="btn btn-outline-primary" (click)="toggleCollapse()"
-            [attr.aria-expanded]="!isCollapsed" aria-controls="collapseExample">
-            Toggle with Function
+    <div *ngFor="let item of jsonDoIt" class="mb-3">
+        <p>
+            <button type="button" class="btn btn-outline-primary" (click)="toggleCollapse(item.id)"
+                [attr.aria-expanded]="!isCollapsed[item.id]" [attr.aria-controls]="'collapseExample_' + item.id">
+                {{ item.title }}
 
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                [ngClass]="{'expanded': !isCollapsed, 'collapsed': isCollapsed}" class="arrow">
-                <path d="M4 12H20M20 12L14 6M20 12L14 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                    stroke-linejoin="round" />
-            </svg>
-
-
-
-        </button>
-    </p>
-
-    <div #collapse="ngbCollapse" [(ngbCollapse)]="isCollapsed" class="collapse-card">
-        <div class="card">
-            <div class="card-body">You can collapse this card by clicking the Toggle button</div>
-        </div>
-        <div>
-            <button class="button-collapse">
-                Find out how
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                    [ngClass]="{'expanded': !isCollapsed[item.id], 'collapsed': isCollapsed[item.id]}" class="arrow">
+                    <path d="M4 12H20M20 12L14 6M20 12L14 18" stroke="currentColor" stroke-width="1.5"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
             </button>
+        </p>
+
+        <div id="collapseExample_{{ item.id }}" #collapse="ngbCollapse" [(ngbCollapse)]="isCollapsed[item.id]"
+            class="collapse-card">
+            <div class="card">
+                <div class="card-body">{{ item.description }}</div>
+            </div>
+            <div>
+                <button class="button-collapse">{{ item.titleButton }}</button>
+            </div>
         </div>
     </div>
 </div>
