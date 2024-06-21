@@ -7,6 +7,7 @@ import { SharedModule } from './shared/shared.module';
 import { EmtechModule } from './emtech/emtech.module';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { provideHttpClient } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -14,13 +15,14 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
   ],
   imports: [
     BrowserModule,
-    RouterModule, // Importar RouterModule si se utilizan rutas en la aplicación
+    RouterModule,
     SharedModule,
     EmtechModule,
     NgbModule,
   ],
   providers: [
-    provideAnimationsAsync()
+    provideAnimationsAsync(),
+    provideHttpClient()
   ],
   bootstrap: [AppComponent]
 })

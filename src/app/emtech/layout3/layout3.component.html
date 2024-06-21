@@ -1,1 +1,28 @@
-<p>layout3 works!</p>
+<div class="row p-0 m-0 container container-global">
+    
+    <div class="col-12 p-0 m-0 pt-5 pb-3">
+        <h1 class="title-text">Our students</h1>
+    </div>
+
+    <div class="col-12 p-0 m-0 carrousel-data">
+        <ng-container *ngIf="randomUserData?.length > 0">
+            <ngb-carousel #carousel [interval]="0" [pauseOnHover]="true" [pauseOnFocus]="true">
+                <ng-template ngFor let-user [ngForOf]="randomUserData">
+                    <ng-template ngbSlide>
+                        <div class="card-item">
+                            <div class="picsum-img-wrapper">
+                                <img [src]="user.picture" class="rounded-circle" alt="Random user image" />
+                            </div>
+                            <div class="carousel-caption">
+                                <h3 class="title-user">{{ user.firstName }}</h3>
+                                <h3 class="subtitle-user"> {{ user.lastName }} </h3>
+                                <p class="title-country">{{ user.country }}</p>
+                            </div>
+
+                        </div>
+                    </ng-template>
+                </ng-template>
+            </ngb-carousel>
+        </ng-container>
+    </div>
+</div>
