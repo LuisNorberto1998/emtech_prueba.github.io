@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbCarouselModule, NgbCollapseModule } from '@ng-bootstrap/ng-bootstrap';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 
 import { Layout1Component } from './layout1/layout1.component';
@@ -26,7 +26,8 @@ import { SharedModule } from '../shared/shared.module';
     CommonModule,
     SharedModule,
     NgbCarouselModule,
-    CarouselModule
+    CarouselModule,
+    NgbCollapseModule
   ],
   exports: [
     Layout1Component,

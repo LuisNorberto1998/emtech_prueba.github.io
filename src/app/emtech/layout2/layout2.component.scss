@@ -1,5 +1,9 @@
 @import 'src/styles';
 
+.background {
+    display: none;
+}
+
 .layout-two {
     position: relative;
     width: 100%;
@@ -63,4 +67,233 @@
 .container-collapse {
     // position: absolute;
     // top: 200px;
+}
+
+// Collapse
+.collapse-container {
+    height: auto;
+
+    p {
+        margin-top: 0;
+        margin-bottom: 1rem;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+    }
+
+    .collapse-card {
+        background-color: transparent;
+        width: 90vw;
+        margin: 0 auto;
+        border: none;
+
+        .card {
+            background-color: transparent;
+            border: none;
+        }
+
+        .card-body {
+            color: $white-color;
+            text-align: left;
+            font-weight: 100;
+            padding: 30px 40px 40px 0px;
+        }
+
+        .button-collapse {
+            background-color: $turquesa-emtech;
+            margin: 0 auto;
+            width: 40%;
+            text-align: center;
+            height: 50px;
+            display: flex;
+            padding: 0;
+            justify-content: center;
+        }
+    }
+
+    button {
+        color: $azul-marino-emtech;
+        background-color: $white-color;
+        width: 90vw;
+        margin: 0 auto;
+        border: none;
+        border-radius: 5px;
+        height: 65px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 15px;
+        position: relative;
+        cursor: pointer;
+
+        &:active {
+            background-color: $shadow-color;
+            color: $azul-marino-emtech;
+        }
+
+        &[aria-expanded="true"] {
+            background-color: $shadow-color;
+            color: $azul-marino-emtech;
+        }
+
+        .arrow {
+            width: auto;
+            height: 30px;
+            display: inline-block;
+            transition: transform 0.3s ease, color 0.3s ease;
+            background-repeat: no-repeat;
+            background-position: right 10px center;
+
+            &.collapsed {
+                transform: rotate(0deg);
+                color: $azul-marino-emtech;
+            }
+
+            &.expanded {
+                transform: rotate(90deg);
+                color: $azul-emtech;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1025px) {
+
+    .layout-two {
+        flex-direction: row;
+        display: flex;
+        height: 850px;
+    }
+
+    .background {
+        display: flex;
+        // background-image: url('assets/img/collapse.png');
+        background-color: black;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 50%;
+        height: 100vh;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .custom-hr {
+            border: none;
+            height: 5px;
+            background-color: $azul-emtech;
+            opacity: 1;
+
+            position: absolute;
+            width: 13%;
+            top: 24%;
+            opacity: 1;
+            right: 26%;
+        }
+
+        .collapse-card {
+            .card {
+                position: absolute;
+                width: 25%;
+                color: white;
+                background: transparent;
+                /* margin: 26% 10%; */
+                right: 15%;
+                top: 39%;
+            }
+
+            .button-collapse {
+                background-color: $azul-emtech;
+                text-align: center;
+                height: 50px;
+                display: flex;
+                padding: 0;
+                justify-content: center;
+                top: 65%;
+                position: absolute;
+                right: 26.5%;
+                border-radius: 5px;
+                width: 12%;
+                height: 50px;
+                align-items: center;
+            }
+
+        }
+    }
+
+    .background-1 {
+        width: 50%;
+        overflow: hidden;
+        height: auto;
+    }
+
+    .container-text-two {
+        width: auto !important;
+        height: 32%;
+
+        h1 {
+            width: 40%;
+            font-size: calc(13px + 1.5vw);
+            font-weight: 700;
+            line-height: 40px;
+            letter-spacing: -1px;
+            text-align: left;
+            padding-top: 20%;
+        }
+
+
+        h3 {
+            letter-spacing: 2px;
+            font-size: calc(13px + 0.5vw);
+            padding-top: 25px;
+        }
+
+    }
+
+    // collapse
+    .collapse-container {
+        p {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            margin: auto;
+        }
+
+
+        button {
+
+            &:active {
+                background-color: $shadow-color;
+                color: $azul-marino-emtech;
+            }
+
+            &[aria-expanded="true"] {
+                background-color: $shadow-color;
+                color: $azul-marino-emtech;
+            }
+
+            .arrow {
+                width: auto;
+                height: 30px;
+                display: inline-block;
+                transition: none;
+                background-repeat: no-repeat;
+                background-position: right 10px center;
+
+                &.collapsed {
+                    transform: none;
+                    color: $azul-marino-emtech;
+                }
+
+                &.expanded {
+                    transform: none;
+                    color: $azul-emtech;
+                }
+            }
+        }
+    }
+
 }

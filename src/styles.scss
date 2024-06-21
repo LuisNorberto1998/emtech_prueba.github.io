@@ -31,6 +31,11 @@ body {
 }
 
 
+.container {
+  max-width: 100% !important;
+}
+
+
 // Styles
 
 $azul-emtech: #1165F6;
@@ -41,6 +46,11 @@ $azul-marino-emtech: #00215B;
 $white-color: #FFFFFF;
 $shadow-color: #E9E9E9;
 $black-color: #000000;
+
+$carousel-control-color: red;
+$carousel-control-prev-icon-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$carousel-control-color}'><path d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/></svg>") !important;
+$carousel-control-next-icon-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$carousel-control-color}'><path d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/></svg>") !important;
+
 
 
 .sidebar-global {
@@ -58,12 +68,86 @@ $black-color: #000000;
   margin: 0;
 }
 
-// Definición de variable
-$prefix: 'myapp-'; // Ejemplo de prefijo
-$navbar-light-toggler-icon-bg: #fff; // Ejemplo de color de fondo
+// Responsive
 
-// Uso de la variable
-.#{$prefix}navbar-toggler-icon {
-  background-color: $navbar-light-toggler-icon-bg; // Aplicando el color de fondo
+/* Movil  */
+@media only screen and (max-width: 768px) {
+  // Estilos para dispositivos móviles en orientación vertical
 }
 
+@media only screen and (max-width: 1024px) and (orientation: landscape) {
+  // Estilos para dispositivos móviles en orientación horizontal
+}
+
+/*  TABLET  */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  // Estilos para tabletas en orientación vertical
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  // Estilos para tabletas en orientación horizontal
+}
+
+@media only screen and (min-width: 1025px) {
+
+  // Header
+  .navbar-brand {
+    margin-left: 5%;
+  }
+
+  .container-fluid {
+    margin: 20px 0;
+  }
+
+  .navbar-expand-lg .navbar-collapse {
+    /* margin: 50px; */
+  }
+
+
+  .navbar-expand-lg .navbar-nav .nav-item a:hover,
+  .navbar-expand-lg .navbar-nav .nav-item a:active {
+    color: $azul-emtech;
+  }
+
+  .navbar-expand-lg .navbar-nav {
+    position: absolute;
+    right: 0;
+    margin-right: 200px;
+
+    .nav-item {
+      margin: 0 1vw;
+      position: relative;
+
+      a {
+        font-size: calc(13px + 0.5vw);
+        cursor: pointer;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        right: -0.5vw;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 1px;
+        height: 35%;
+        background-color: $azul-emtech;
+      }
+    }
+  }
+
+  // Layout1
+  .container-1 {
+    height: 878px;
+    display: flex;
+    overflow: hidden;
+    margin-top: 90px;
+  }
+
+  .container-2 {
+    height: auto;
+    overflow: hidden;
+    display: block;
+  }
+
+}

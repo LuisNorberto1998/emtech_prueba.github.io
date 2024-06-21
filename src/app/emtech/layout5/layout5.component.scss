@@ -14,7 +14,7 @@
     width: 50vw;
     margin: 20% auto 20% 13% !important;
 
-    .bold-text{
+    .bold-text {
         font-family: 'Proxima Nova Condensed', sans-serif;
         font-family: 'Proxima Nova Extra Condensed', sans-serif;
         font-size: 30px;
@@ -23,5 +23,22 @@
         letter-spacing: -1px;
         text-align: left;
 
+    }
+}
+
+@media only screen and (min-width: 1025px) {
+    .container-layout4 {
+        margin: 5% auto !important;
+        text-align: center;
+        font-size: calc(13px + 2.5vw);
+        align-items: center;
+
+        .bold-text {
+            font-size: calc(13px + 2.5vw);
+        }
+
+        .color-text {
+            color: $turquesa-emtech;
+        }
     }
 }

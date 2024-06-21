@@ -66,3 +66,46 @@
         margin-top: 10px;
     }
 }
+
+.expand {
+    display: none;
+}
+
+
+@media only screen and (min-width: 1025px) {
+
+    .container-layout-3 {
+        padding: 0 10% !important;
+    }
+
+    .expand {
+        display: block;
+    }
+
+    .card-responsive {
+        display: flex;
+        flex-direction: row;
+        // width: 50%;
+
+        .picsum-img-wrapper {
+            width: 26%;
+        }
+
+        .card-item {
+            overflow: hidden;
+            width: 50%;
+            display: flex;
+
+            .carousel-caption {
+                top: 0;
+                left: 0;
+                width: 30%;
+                height: 30%;
+                display: flex;
+                flex-direction: column;
+                position: relative;
+            }
+        }
+    }
+
+}
