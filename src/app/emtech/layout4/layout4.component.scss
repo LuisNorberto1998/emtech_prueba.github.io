@@ -1,0 +1,48 @@
+@import 'src/styles';
+
+.carrousel-data {
+
+    .row {
+
+        .col-6 {
+            width: 50% !important;
+            padding: 0;
+        }
+    }
+
+    .picsum-img-wrapper {
+        text-align: center;
+    }
+
+    img {
+        max-width: 100%;
+        border-radius: 8px;
+    }
+
+    .carousel-caption {
+        text-align: center;
+    }
+}
+
+.container-layout3 {
+    background-color: $azul-emtech;
+    min-height: 278px;
+}
+
+.title-container {
+
+    height: auto;
+
+    .title-layout-4 {
+        text-align: center;
+        font-family: 'Proxima Nova Condensed', sans-serif;
+        font-family: 'Proxima Nova Extra Condensed', sans-serif;
+        font-size: 20px;
+        font-weight: 300;
+        line-height: 20px;
+        text-align: center;
+        color: $white-color;
+        width: 45vw;
+        margin: 30px auto 0 auto;
+    }
+}

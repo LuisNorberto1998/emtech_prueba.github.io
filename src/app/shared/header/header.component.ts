@@ -12,8 +12,8 @@ export class HeaderComponent {
     this.navbarOpen = !this.navbarOpen;
   }
 
-  scrollToInicio() {
-    const element = document.getElementById('inicio');
+  scrollToInicio(item: string) {
+    const element = document.getElementById(item);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth', block: 'start' });
       this.navbarOpen = false; // Oculta el navbar desplegado

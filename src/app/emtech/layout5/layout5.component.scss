@@ -1,0 +1,27 @@
+@import 'src/styles';
+
+.container-layout4 {
+    min-height: 250px;
+
+    font-family: 'Proxima Nova Condensed', sans-serif;
+    font-family: 'Proxima Nova Extra Condensed', sans-serif;
+    font-size: 30px;
+    font-weight: 100;
+    line-height: 35px;
+    letter-spacing: -1px;
+    text-align: left;
+    color: $azul-emtech;
+    width: 50vw;
+    margin: 20% auto 20% 13% !important;
+
+    .bold-text{
+        font-family: 'Proxima Nova Condensed', sans-serif;
+        font-family: 'Proxima Nova Extra Condensed', sans-serif;
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 35px;
+        letter-spacing: -1px;
+        text-align: left;
+
+    }
+}
